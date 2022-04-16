@@ -19,4 +19,21 @@
     </div>
 
     <div class="container mt--10 pb-5"></div>
+
+    @role('Admin')
+        @include('dashboard.admin')
+    @endrole
+    
+    @role('Orangtua')
+        @include('dashboard.orangtua')
+    @endrole
+
+    @role('Guru')
+        @include('dashboard.guru')
+    @endrole
+
+    @role('Siswa')
+        @include('dashboard.siswa')
+    @endrole
+
 @endsection
