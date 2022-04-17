@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,35 +17,30 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', 'HomeController@profile')->name('profile');
+Route::get('/profile/edit', 'HomeController@profileEdit')->name('profile.edit');
+Route::put('/profile/update', 'HomeController@profileUpdate')->name('profile.update');
+Route::get('/profile/changepassword', 'HomeController@changePasswordForm')->name('profile.change.password');
+Route::post('/profile/changepassword', 'HomeController@changePassword')->name('profile.changepassword');
 
-Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
-
-Route::group(['middleware' => 'auth'], function () {
-	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
-	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
-	Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
-	Route::get('upgrade', function () {return view('pages.upgrade');})->name('upgrade'); 
-	Route::get('map', function () {return view('pages.maps');})->name('map');
-	Route::get('icons', function () {return view('pages.icons');})->name('icons'); 
-	Route::get('table-list', function () {return view('pages.tables');})->name('table');
-	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
-});
-
-Route::group(['middleware' => ['auth','role:Admin']], function () 	
+Route::group(['middleware' => ['auth','role:Admin']], function () 
 {
-	Route::resource('classes', 'GradeController');
+
+
+
 });
 
-Route::group(['middleware' => ['auth','role:Guru']], function () 
+Route::group(['middleware' => ['auth','role:Teacher']], function () 
 {
 
 });
 
-Route::group(['middleware' => ['auth','role:Orangtua']], function () 
+Route::group(['middleware' => ['auth','role:Parent']], function () 
 {
 
 });
 
-Route::group(['middleware' => ['auth','role:Siswa']], function () {
+Route::group(['middleware' => ['auth','role:Student']], function () {
 
 });

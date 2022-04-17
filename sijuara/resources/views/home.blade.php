@@ -1,39 +1,36 @@
-@extends('layouts.app', ['class' => 'bg-default'])
+@extends('layouts.app')
 
 @section('content')
-    <div class="header bg-gradient-primary py-7 py-lg-8">
-        <div class="container">
-            <div class="header-body text-center mt-7 mb-7">
-                <div class="row justify-content-center">
-                    <div class="col-lg-5 col-md-6">
-                        <h1 class="text-white">{{ __('Welcome to Argon Dashboard FREE Laravel Live Preview.') }}</h1>
-                    </div>
-                </div>
-            </div>
+
+<div class="home">
+    <div class="flex items-center justify-between mb-6">
+        <div>
+            <h2 class="text-gray-700 uppercase font-bold">Dashboard</h2>
         </div>
-        <div class="separator separator-bottom separator-skew zindex-100">
-            <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
-            </svg>
+        <div class="flex flex-wrap items-center">
+            <a href="{{ route('profile') }}" class="bg-gray-200 text-gray-700 text-sm uppercase py-2 px-4 flex items-center rounded">
+                <svg class="w-3 h-3 fill-current" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+                <span class="ml-2 text-xs font-semibold">Profile</span>
+            </a>
         </div>
     </div>
 
-    <div class="container mt--10 pb-5"></div>
-
-    <!-- @role('Admin')
+    @role('Admin')
         @include('dashboard.admin')
-    @endrole -->
-    
-    <!-- @role('Orangtua')
-        @include('dashboard.orangtua')
     @endrole
 
-    @role('Guru')
-        @include('dashboard.guru')
+    @role('Parent')
+        @include('dashboard.parents')
     @endrole
 
-    @role('Siswa')
-        @include('dashboard.siswa')
-    @endrole -->
+    @role('Teacher')
+        @include('dashboard.teacher')
+    @endrole
+
+    @role('Student')
+        @include('dashboard.student')
+    @endrole
+
+</div>
 
 @endsection
