@@ -20,11 +20,11 @@
 
     <div class="container mt--10 pb-5"></div>
 
-    @role('Admin')
+    <!-- @role('Admin')
         @include('dashboard.admin')
-    @endrole
+    @endrole -->
     
-    @role('Orangtua')
+    <!-- @role('Orangtua')
         @include('dashboard.orangtua')
     @endrole
 
@@ -34,6 +34,6 @@
 
     @role('Siswa')
         @include('dashboard.siswa')
-    @endrole
+    @endrole -->
 
 @endsection
