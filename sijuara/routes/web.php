@@ -29,6 +29,15 @@ Route::group(['middleware' => ['auth','role:Admin']], function ()
 
 
 
+    Route::get('assign-subject-to-class/{id}', 'GradeController@assignSubject')->name('class.assign.subject');
+    Route::post('assign-subject-to-class/{id}', 'GradeController@storeAssignedSubject')->name('store.class.assign.subject');
+
+    Route::resource('classes', 'GradeController');
+    Route::resource('subject', 'SubjectController');
+    Route::resource('teacher', 'TeacherController');
+    Route::resource('student', 'StudentController');
+
+
 });
 
 Route::group(['middleware' => ['auth','role:Teacher']], function () 
