@@ -22,14 +22,17 @@
                 <div class="w-2/12 px-4 py-3">Kode Pelajaran</div>
                 <div class="w-2/12 px-4 py-3 text-right">Edit</div>
             </div>
+            @foreach ($teachers as $teacher)
                 <div class="flex flex-wrap items-center text-gray-700 border-t-2 border-l-4 border-r-4 border-gray-300">
-                    <div class="w-1/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight"></div>
-                    <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight"></div>
+                    <div class="w-1/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $teacher->user->name }}</div>
+                    <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $teacher->user->email }}</div>
                     <div class="w-1/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">
+                    @foreach ($teacher->subjects as $subject)
                         <span class="bg-gray-200 text-sm mr-1 mb-1 px-2 font-semibold border rounded-full">
+                    @endforeach
                         </span>
                     </div>
-                    <div class="w-4/12 px-4 py-3 text-sm text-gray-600 text-center tracking-tight">
+                    <div class="w-4/12 px-4 py-3 text-sm text-gray-600 text-center tracking-tight">{{ $teacher->phone }}</div>
                             <span class="bg-gray-200 text-sm mr-1 mb-1 px-2 font-semibold border rounded-full"></span>
                     </div>
                     <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight"></div>
@@ -45,8 +48,10 @@
                             </button>
                     </div>
                 </div>
+            @endforeach
         </div>
         <div class="mt-8">
+            {{ $teachers->links() }}
         </div>
     </div>
 @endsection
