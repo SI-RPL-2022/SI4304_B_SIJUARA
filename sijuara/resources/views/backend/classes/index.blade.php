@@ -22,6 +22,7 @@
                 <div class="w-2/12 px-4 py-3">Guru</div>
                 <div class="w-2/12 px-4 py-3 text-right">Edit</div>
             </div>
+
             @foreach ($classes as $class)
                 <div class="flex flex-wrap items-center text-gray-700 border-t-2 border-l-4 border-r-4 border-gray-300">
                     <div class="w-1/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $class->class_numeric }}</div>
