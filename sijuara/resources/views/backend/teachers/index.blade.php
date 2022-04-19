@@ -4,12 +4,12 @@
     <div class="roles-permissions">
         <div class="flex items-center justify-between mb-6">
             <div>
-                <h2 class="text-gray-700 uppercase font-bold">Daftar Dosen Pengampu </h2>
+                <h2 class="text-gray-700 uppercase font-bold">Daftar Guru Pengampu </h2>
             </div>
             <div class="flex flex-wrap items-center">
                 <a href="" class="bg-green-500 text-white-50 text-sm uppercase py-2 px-4 flex items-center rounded">
                     <svg class="w-3 h-3 fill-current" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
-                    <span class="ml-2 text-xs font-semibold">Daftar Dosen Pengampu</span>
+                    <span class="ml-2 text-xs font-semibold">Daftar Guru Pengampu</span>
                 </a>
             </div>
         </div>
@@ -22,14 +22,17 @@
                 <div class="w-2/12 px-4 py-3">Kode Pelajaran</div>
                 <div class="w-2/12 px-4 py-3 text-right">Edit</div>
             </div>
+            @foreach ($teachers as $teacher)
                 <div class="flex flex-wrap items-center text-gray-700 border-t-2 border-l-4 border-r-4 border-gray-300">
-                    <div class="w-1/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight"></div>
-                    <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight"></div>
+                    <div class="w-1/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $teacher->user->name }}</div>
+                    <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $teacher->user->email }}</div>
                     <div class="w-1/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">
+                    @foreach ($teacher->subjects as $subject)
                         <span class="bg-gray-200 text-sm mr-1 mb-1 px-2 font-semibold border rounded-full">
+                    @endforeach
                         </span>
                     </div>
-                    <div class="w-4/12 px-4 py-3 text-sm text-gray-600 text-center tracking-tight">
+                    <div class="w-4/12 px-4 py-3 text-sm text-gray-600 text-center tracking-tight">{{ $teacher->phone }}</div>
                             <span class="bg-gray-200 text-sm mr-1 mb-1 px-2 font-semibold border rounded-full"></span>
                     </div>
                     <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight"></div>
@@ -45,8 +48,10 @@
                             </button>
                     </div>
                 </div>
+            @endforeach
         </div>
         <div class="mt-8">
+            {{ $teachers->links() }}
         </div>
     </div>
 @endsection
