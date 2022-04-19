@@ -15,22 +15,22 @@
         </div>
         <div class="mt-8 bg-white rounded border-b-4 border-gray-300">
             <div class="flex flex-wrap items-center uppercase text-sm font-semibold bg-gray-300 text-gray-600 rounded-tl rounded-tr">
-                <div class="w-1/12 px-4 py-3">#</div>
                 <div class="w-2/12 px-4 py-3">Nama Siswa</div>
                 <div class="w-1/12 px-4 py-3">Email</div>
                 <div class="w-4/12 px-4 py-3 text-center">Kelas</div>
                 <div class="w-2/12 px-4 py-3">No HP</div>
                 <div class="w-2/12 px-4 py-3 text-right">Edit</div>
             </div>
+            @foreach ($students as $student)
                 <div class="flex flex-wrap items-center text-gray-700 border-t-2 border-l-4 border-r-4 border-gray-300">
-                    <div class="w-1/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight"></div>
-                    <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight"></div>
+                    <div class="w-1/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $student->user->name }}</div>
+                    <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $student->user->email }}</div>
                     <div class="w-1/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">
                         <span class="bg-gray-200 text-sm mr-1 mb-1 px-2 font-semibold border rounded-full">
-                        </span>
+                        </span>{{ $student->class->class_name ?? '' }}
                     </div>
                     <div class="w-4/12 px-4 py-3 text-sm text-gray-600 text-center tracking-tight">
-                            <span class="bg-gray-200 text-sm mr-1 mb-1 px-2 font-semibold border rounded-full"></span>
+                            <span class="bg-gray-200 text-sm mr-1 mb-1 px-2 font-semibold border rounded-full"></span>{{ $student->phone }}
                     </div>
                     <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight"></div>
                     <div class="w-2/12 flex items-center justify-end px-3">
@@ -45,8 +45,10 @@
                             </button>
                     </div>
                 </div>
+            @endforeach
         </div>
         <div class="mt-8">
+            {{ $students->links() }}
         </div>
     </div>
 @endsection
