@@ -19,7 +19,7 @@
                 <div class="md:flex md:items-center mb-4">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Current Password : 
+                            Password Sebelumnya : 
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -32,7 +32,7 @@
                 <div class="md:flex md:items-center mb-4">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            New Password :
+                            Password Baru :
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -45,7 +45,7 @@
                 <div class="md:flex md:items-center mb-4">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Confirm New Password :
+                            Konfirmasi Password :
                         </label>
                     </div>
                     <div class="md:w-2/3">
