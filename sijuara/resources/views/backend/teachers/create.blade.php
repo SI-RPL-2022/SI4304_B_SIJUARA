@@ -80,15 +80,15 @@
                         <div class="flex flex-row items-center">
                             <label class="block text-gray-500 font-bold">
                                 <input name="gender" class="mr-2 leading-tight" type="radio" value="male">
-                                <span class="text-sm">Male</span>
+                                <span class="text-sm">Laki Laki</span>
                             </label>
                             <label class="ml-4 block text-gray-500 font-bold">
                                 <input name="gender" class="mr-2 leading-tight" type="radio" value="female">
-                                <span class="text-sm">Female</span>
+                                <span class="text-sm">Perempuan</span>
                             </label>
                             <label class="ml-4 block text-gray-500 font-bold">
                                 <input name="gender" class="mr-2 leading-tight" type="radio" value="other">
-                                <span class="text-sm">Other</span>
+                                <span class="text-sm">Lainnya</span>
                             </label>
                         </div>
                         @error('gender')
@@ -149,8 +149,8 @@
                 <div class="md:flex md:items-center">
                     <div class="md:w-1/3"></div>
                     <div class="md:w-2/3">
-                        <button class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
-                            Tambah Guru Pengampu
+                        <button class="shadow bg-blue-500 hover:bg-purple-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
+                            Update Guru Pengampu
                         </button>
                     </div>
                 </div>
