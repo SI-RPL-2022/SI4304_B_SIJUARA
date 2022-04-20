@@ -5,11 +5,8 @@
 
         <div class="flex items-center justify-between mb-6">
             <div>
-<<<<<<< Updated upstream
-                <h2 class="text-gray-700 uppercase font-bold">Profil Siswa</h2>
-=======
+
                 <h2 class="text-gray-700 uppercase font-bold">Data Detail Siswa</h2>
->>>>>>> Stashed changes
             </div>
             <div class="flex flex-wrap items-center">
                 <a href="{{ route('student.index') }}" class="bg-gray-200 text-gray-700 text-sm uppercase py-2 px-4 flex items-center rounded">
@@ -51,11 +48,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-<<<<<<< Updated upstream
                             Nomor Urut Absen :
-=======
-                        Nomor Urut Absen :
->>>>>>> Stashed changes
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -65,11 +58,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-<<<<<<< Updated upstream
-                            Nomor HP/WA :
-=======
                             No HP :
->>>>>>> Stashed changes
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -99,11 +88,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-<<<<<<< Updated upstream
-                            Alamat pada KK :
-=======
                             Alamat Pada KK :
->>>>>>> Stashed changes
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -133,11 +118,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-<<<<<<< Updated upstream
                             Nama Orangtua/Wali :
-=======
-                            Orang Tua Siswa :
->>>>>>> Stashed changes
                         </label>
                     </div>
                     <div class="md:w-2/3 block text-gray-600 font-bold">
@@ -147,11 +128,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-<<<<<<< Updated upstream
                             Email Orangtua/Wali :
-=======
-                            Email Orang Tua :
->>>>>>> Stashed changes
                         </label>
                     </div>
                     <div class="md:w-2/3 block text-gray-600 font-bold">
@@ -161,11 +138,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-<<<<<<< Updated upstream
                             No HP Orangtua/Wali :
-=======
-                            No Orang Tua :
->>>>>>> Stashed changes
                         </label>
                     </div>
                     <div class="md:w-2/3 block text-gray-600 font-bold">
@@ -175,11 +148,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-<<<<<<< Updated upstream
                             Alamat Orangtua :
-=======
-                            Alamat Orang Tua :
->>>>>>> Stashed changes
                         </label>
                     </div>
                     <div class="md:w-2/3 block text-gray-600 font-bold">
