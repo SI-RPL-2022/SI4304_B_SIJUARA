@@ -4,7 +4,7 @@
     <div class="roles-permissions">
         <div class="flex items-center justify-between mb-6">
             <div>
-                <h2 class="text-gray-700 uppercase font-bold">Kelas</h2>
+                <h2 class="text-gray-700 uppercase font-bold">Data Kelas</h2>
             </div>
             <div class="flex flex-wrap items-center">
                 <a href="{{ route('classes.create') }}" class="bg-blue-500 hover:bg-purple-700 text-white-50 text-sm uppercase py-2 px-4 flex items-center rounded">
@@ -14,8 +14,8 @@
             </div>
         </div>
         <div class="mt-8 bg-white rounded border-b-4 border-gray-300">
-            <div class="flex flex-wrap items-center uppercase text-sm font-semibold bg-pink-400 text-dark-600 rounded-tl rounded-tr">
-                <div class="w-1/12 px-4 py-3">#</div>
+            <div class="flex flex-wrap items-center capitalize text-sm font-semibold bg-pink-400 text-dark-600 rounded-tl rounded-tr">
+                <div class="w-1/12 px-4 py-3">No</div>
                 <div class="w-2/12 px-4 py-3">Nama</div>
                 <div class="w-1/12 px-4 py-3">Siswa</div>
                 <div class="w-4/12 px-4 py-3 text-center">Kode Pelajaran</div>
