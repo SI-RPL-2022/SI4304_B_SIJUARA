@@ -28,7 +28,7 @@
                     <div class="md:w-2/3">
                         <input name="class_name" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" type="text" value="{{ $class->class_name }}">
                             ('class_name')
-                            <p class="text-red-500 text-xs italic">{{ $message }}</p>
+                            <p class="text-red-500 text-xs italic"></p>
                         
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                     <div class="md:w-2/3">
                         <input name="class_numeric" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" type="number" value="{{ $class->class_numeric }}">
                             ('class_numeric')
-                            <p class="text-red-500 text-xs italic">{{ $message }}</p>
+                            <p class="text-red-500 text-xs italic"></p>
                         
                     </div>
                 </div>
@@ -57,9 +57,9 @@
                                 <option value="">--Select Teacher--</option>
                                      ($teachers as $teacher)
                                     <option value="{{ $teacher->id }}"
-                                        {{ ($teacher->id === $class->teacher_id) ? 'selected' : '' }}
+                                        
                                     >
-                                        {{ $teacher->user->name }}
+                                        
                                     </option>
                                 
                             </select>
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                             ('teacher_id')
-                            <p class="text-red-500 text-xs font-normal italic">{{ $message }}</p>
+                            <p class="text-red-500 text-xs font-normal italic"></p>
                        
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                     <div class="md:w-2/3">
                         <input name="class_description" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" type="text" value="{{ $class->class_description }}">
                             ('class_description')
-                            <p class="text-red-500 text-xs italic">{{ $message }}</p>
+                            <p class="text-red-500 text-xs italic"></p>
                       
                     </div>
                 </div>
