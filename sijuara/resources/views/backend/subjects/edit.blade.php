@@ -18,16 +18,15 @@
         <div class="table w-full mt-8 bg-white rounded">
             <form action="{{ route('classes.update',$class->id) }}" method="POST" class="w-full max-w-xl px-6 py-12">
                 
-                    ('PUT')
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Class Name
+                            Nama Kelas
                         </label>
                     </div>
                     <div class="md:w-2/3">
                         <input name="class_name" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" type="text" value="{{ $class->class_name }}">
-                            ('class_name')
+                            
                             <p class="text-red-500 text-xs italic"></p>
                         
                     </div>
@@ -35,12 +34,12 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Class Numeric
+                            Kode Kelas
                         </label>
                     </div>
                     <div class="md:w-2/3">
                         <input name="class_numeric" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" type="number" value="{{ $class->class_numeric }}">
-                            ('class_numeric')
+                            
                             <p class="text-red-500 text-xs italic"></p>
                         
                     </div>
@@ -48,14 +47,14 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Assign Teacher
+                            Pilih Guru
                         </label>
                     </div>
                     <div class="md:w-2/3 block text-gray-600 font-bold">
                         <div class="relative">
                             <select name="teacher_id" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-                                <option value="">--Select Teacher--</option>
-                                     ($teachers as $teacher)
+                                <option value="">--Pilih Guru--</option>
+                                     
                                     <option value="{{ $teacher->id }}"
                                         
                                     >
@@ -67,22 +66,22 @@
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                             </div>
                         </div>
-                            ('teacher_id')
+                            
                             <p class="text-red-500 text-xs font-normal italic"></p>
-                       
+                        
                     </div>
                 </div>
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Class Description
+                            Keterangan Kelas
                         </label>
                     </div>
                     <div class="md:w-2/3">
                         <input name="class_description" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" type="text" value="{{ $class->class_description }}">
-                            ('class_description')
-                            <p class="text-red-500 text-xs italic"></p>
-                      
+                            
+                            <p class="text-red-500 text-xs italic">{</p>
+                        
                     </div>
                 </div>
 
@@ -90,7 +89,7 @@
                     <div class="md:w-1/3"></div>
                     <div class="md:w-2/3">
                         <button class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
-                            Update Class
+                            Update Kelas
                         </button>
                     </div>
                 </div>
