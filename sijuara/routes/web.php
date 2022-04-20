@@ -27,7 +27,11 @@ Route::post('/profile/changepassword', 'HomeController@changePassword')->name('p
 Route::group(['middleware' => ['auth','role:Admin']], function () 
 {
 
-
+    Route::get('/roles-permissions', 'RolePermissionController@roles')->name('roles-permissions');
+    Route::get('/role-create', 'RolePermissionController@createRole')->name('role.create');
+    Route::post('/role-store', 'RolePermissionController@storeRole')->name('role.store');
+    Route::get('/role-edit/{id}', 'RolePermissionController@editRole')->name('role.edit');
+    Route::put('/role-update/{id}', 'RolePermissionController@updateRole')->name('role.update');
 
     Route::get('assign-subject-to-class/{id}', 'GradeController@assignSubject')->name('class.assign.subject');
     Route::post('assign-subject-to-class/{id}', 'GradeController@storeAssignedSubject')->name('store.class.assign.subject');
@@ -42,7 +46,7 @@ Route::group(['middleware' => ['auth','role:Admin']], function ()
 
 Route::group(['middleware' => ['auth','role:Teacher']], function () 
 {
-
+    
 });
 
 Route::group(['middleware' => ['auth','role:Parent']], function () 
