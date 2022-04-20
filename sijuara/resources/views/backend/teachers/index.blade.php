@@ -16,11 +16,10 @@
         </div>
         <div class="mt-8 bg-white rounded border-b-4 border-gray-300">
             <div class="flex flex-wrap items-center uppercase text-sm font-semibold bg-pink-400 text-dark-600 rounded-tl rounded-tr">
-                <div class="w-1/12 px-4 py-3">#</div>
                 <div class="w-2/12 px-4 py-3">Nama Guru</div>
-                <div class="w-1/12 px-4 py-3">NIP</div>
-                <div class="w-4/12 px-4 py-3 text-center">Mata Pelajaran</div>
-                <div class="w-2/12 px-4 py-3">Kode Pelajaran</div>
+                <div class="w-3/12 px-4 py-3">Email</div>
+                <div class="w-3/12 px-4 py-3">Kode Pelajaran</div>
+                <div class="w-2/12 px-4 py-3">No HP</div>
                 <div class="w-2/12 px-4 py-3 text-right">Edit</div>
             </div>
             @foreach ($teachers as $teacher)
