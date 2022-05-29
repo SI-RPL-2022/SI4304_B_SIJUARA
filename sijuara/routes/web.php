@@ -58,7 +58,7 @@ Route::group(['middleware' => ['auth','role:Teacher']], function ()
 
 Route::group(['middleware' => ['auth','role:Parent']], function () 
 {
-
+    Route::get('attendance/{attendance}', 'AttendanceController@show')->name('attendance.show');
 });
 
 Route::group(['middleware' => ['auth','role:Student']], function () {
