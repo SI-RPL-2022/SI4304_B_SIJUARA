@@ -36,16 +36,16 @@
                             <div class="w-3/12 text-sm text-left text-gray-600 py-2 px-4 font-semibold"></div>
                             <div class="w-5/12 text-sm text-right py-2 px-4 flex items-center justify-end">
                                 <label class="block text-gray-500 font-semibold sm:border-r sm:pr-4">
-                                    <input name="attendences[{{ $student->id }}]" class="leading-tight" type="radio" value="present">
+                                    <input name="attendences" class="leading-tight" type="radio" value="present">
                                     <span class="text-sm">Present</span>
                                 </label>
                                 <label class="ml-4 block text-gray-500 font-semibold">
-                                    <input name="attendences[{{ $student->id }}]" class="leading-tight" type="radio" value="absent">
+                                    <input name="attendences" class="leading-tight" type="radio" value="absent">
                                     <span class="text-sm">Absent</span>
                                 </label>
                             </div>
-                            <input type="hidden" name="class_id" value="{{ $student->class_id }}">
-                            <input type="hidden" name="teacher_id" value="{{ $class->teacher_id }}">
+                            <input type="hidden" name="class_id" value="">
+                            <input type="hidden" name="teacher_id" value="">
                         </div>
                     <div class="mt-6">
                         <button class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
