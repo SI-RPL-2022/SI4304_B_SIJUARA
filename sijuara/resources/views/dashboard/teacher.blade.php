@@ -1,6 +1,6 @@
 <div class="w-full block mt-8">
     <div class="flex flex-wrap sm:flex-no-wrap justify-between">
-        <div class="w-full bg-blue-300 text-center border border-gray-300 px-8 py-6 rounded">
+        <div class="w-full bg-red-300 text-center border border-gray-300 px-8 py-6 rounded">
             <h3 class="text-gray-700 uppercase font-bold">
                 <span class="text-4xl"></span>
                 <span class="leading-tight">Kelas </span>
@@ -27,7 +27,7 @@
             <div class="flex flex-wrap items-center">
                     <div class="w-full sm:w-1/2 text-center border border-gray-200 rounded">
                         <div class="text-gray-800 uppercase font-semibold px-4 py-4 mb-2"></div>
-                        <a href="" class="bg-gray-200 inline-block mb-4 text-xs text-gray-600 uppercase font-semibold px-4 py-2 border border-gray-200 rounded">Kehadiran</a>
+                        <a href="" class="bg-blue-500 hover:bg-purple-700 inline-block mb-4 text-xs text-dark-600 uppercase font-semibold px-4 py-2 border border-gray-200 rounded">Kehadiran</a>
                     </div>
             </div>
         </div>
