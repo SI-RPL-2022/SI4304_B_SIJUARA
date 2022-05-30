@@ -165,7 +165,9 @@
                             @else
                                 <span class="text-xs text-white bg-red-500 px-2 py-1 rounded">A</span>
                             @endif
+
                         </div>
+                        
                     </div>
                 @endforeach
             </div>
