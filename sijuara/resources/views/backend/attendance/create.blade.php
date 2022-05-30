@@ -42,11 +42,11 @@
                             <div class="w-5/12 text-sm text-center py-2 px-4 flex items-center justify-end">
                                 <label class="block text-gray-500 font-semibold sm:border-r sm:pr-4">
                                     <input name="attendences[{{ $student->id }}]" class="leading-tight" type="radio" value="present">
-                                    <span class="text-sm text-center">Present</span>
+                                    <span class="text-sm text-center">Hadir</span>
                                 </label>
                                 <label class="ml-4 block text-gray-500 font-semibold">
                                     <input name="attendences[{{ $student->id }}]" class="leading-tight" type="radio" value="absent">
-                                    <span class="text-sm text-center">Absent</span>
+                                    <span class="text-sm text-center">Alfa</span>
                                 </label>
                             </div>
                             <input type="hidden" name="class_id" value="{{ $student->class_id }}">
