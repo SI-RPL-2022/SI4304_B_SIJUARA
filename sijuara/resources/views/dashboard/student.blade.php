@@ -160,12 +160,16 @@
                         <div class="w-1/4 text-left text-gray-600 py-2 px-4 font-medium">{{ $attendance->class->class_name }}</div>
                         <div class="w-1/4 text-left text-gray-600 py-2 px-4 font-medium">{{ $attendance->teacher->user->name }}</div>
                         <div class="w-1/4 text-right text-gray-600 py-2 px-4 font-medium">
-                            @if($attendance->attendence_status)
-                                <span class="text-xs text-white bg-green-500 px-2 py-1 rounded">P</span>
-                            @else
+                        
+                                <span class="text-xs text-white bg-green-500 px-2 py-1 rounded">H</span>
+                        
                                 <span class="text-xs text-white bg-red-500 px-2 py-1 rounded">A</span>
-                            @endif
 
+                                <span class="text-xs text-white bg-red-500 px-2 py-1 rounded">I</span>
+
+                                <span class="text-xs text-white bg-red-500 px-2 py-1 rounded">S</span>
+                     
+    
                         </div>
                         
                     </div>
