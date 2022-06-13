@@ -11,7 +11,7 @@
 
 <div class="w-full block mt-4 sm:mt-8">
     <div class="flex flex-wrap sm:flex-no-wrap justify-between">
-
+    @foreach ($parents->children as $key => $children)
             <div class="w-full bg-gray-200 text-center border border-gray-300 rounded px-8 py-6 mb-4 {{ ($key>=1) ? 'ml-0 sm:ml-2' : '' }} {{ ($parents->children_count===1) ? 'sm:max-w-sm' : '' }}">
                 <div class="text-gray-700 font-bold">
                     <div class="mb-6">
@@ -42,11 +42,6 @@
                     <div class="flex items-center justify-between">
                         <div class="w-1/2 text-sm text-right">Address :</div>
                         <div class="w-1/2 text-sm text-left ml-2">{{ $children->current_address }}</div>
-                    </div>
-
-                    <div class="mt-6">
-                        <a href="{{ route('attendance.show',$children->id) }}" class="bg-gray-100 inline-block mb-4 text-xs text-gray-600 uppercase font-semibold px-4 py-2 border border-gray-400 rounded">Attendence</a>
-                        <a href="{{ route('teacher.attendance.create',$children->id) }}" class="bg-gray-100 inline-block mb-4 text-xs text-gray-600 uppercase font-semibold px-4 py-2 border border-gray-400 rounded">Fees</a>
                     </div>
                 </div>
             </div>
