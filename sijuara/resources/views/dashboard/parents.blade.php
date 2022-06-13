@@ -24,10 +24,6 @@
                         <div class="w-1/2 text-sm text-left ml-2">{{ $children->class->class_name }}</div>
                     </div>
                     <div class="flex items-center justify-between">
-                        <div class="w-1/2 text-sm text-right">Absen :</div>
-                        <div class="w-1/2 text-sm text-left ml-2">{{ $children->roll_number }}</div>
-                    </div>
-                    <div class="flex items-center justify-between">
                         <div class="w-1/2 text-sm text-right">Nomor HP :</div>
                         <div class="w-1/2 text-sm text-left ml-2">{{ $children->phone }}</div>
                     </div>
