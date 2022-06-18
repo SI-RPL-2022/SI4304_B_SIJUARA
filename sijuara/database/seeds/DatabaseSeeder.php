@@ -61,7 +61,7 @@ class DatabaseSeeder extends Seeder
         DB::table('teachers')->insert([
             [
                 'user_id'           => $user2->id,
-                'gender'            => 'male',
+                'gender'            => 'Laki-laki',
                 'phone'             => '085151234567',
                 'dateofbirth'       => '1993-04-11',
                 'current_address'   => 'Telkom',
@@ -73,7 +73,7 @@ class DatabaseSeeder extends Seeder
         DB::table('parents')->insert([
             [
                 'user_id'           => $user3->id,
-                'gender'            => 'male',
+                'gender'            => 'Laki-laki',
                 'phone'             => '085151234568',
                 'current_address'   => 'Telkom',
                 'permanent_address' => 'Kota Bandung',
@@ -94,7 +94,7 @@ class DatabaseSeeder extends Seeder
                 'parent_id'         => 1,
                 'class_id'          => 1,
                 'roll_number'       => 1,
-                'gender'            => 'female',
+                'gender'            => 'Perempuan',
                 'phone'             => '085151234569',
                 'dateofbirth'       => '2000-04-11',
                 'current_address'   => 'Bojongsoang',
