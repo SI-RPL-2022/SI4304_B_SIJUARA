@@ -68,7 +68,7 @@
             <span class="ml-2 text-sm font-semibold">Absensi</span>
         </a>
 
-        <a href="" class="flex items-center text-gray-600 py-2 hover:text-blue-700">
+        <a href="{{ route('parents.index') }}" class="flex items-center text-gray-600 py-2 hover:text-blue-700">
             <svg class="h-4 w-4 fill-current" aria-hidden="true" focusable="false" data-prefix="fas"
                 data-icon="user-friends" class="svg-inline--fa fa-user-friends fa-w-20" role="img"
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
