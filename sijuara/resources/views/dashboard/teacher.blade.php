@@ -28,7 +28,7 @@
                 @foreach ($teacher->classes as $class)
                     <div class="w-full sm:w-1/2 text-center border border-gray-200 rounded">
                         <div class="text-gray-800 uppercase font-semibold px-4 py-4 mb-2">{{ $class->class_name }}</div>
-                        <a href="{{ route('teacher.attendance.create',$class->id) }}" class="bg-blue-500 hover:bg-purple-700 inline-block mb-4 text-xs text-dark-600 uppercase font-semibold px-4 py-2 border border-gray-200 rounded">Attendence</a>
+                        <a href="{{ route('teacher.attendance.create',$class->id) }}" class="bg-blue-500 hover:bg-purple-700 inline-block mb-4 text-xs text-dark-600 uppercase font-semibold px-4 py-2 border border-gray-200 rounded">Absensi</a>
                     </div>
                 @endforeach
             </div>

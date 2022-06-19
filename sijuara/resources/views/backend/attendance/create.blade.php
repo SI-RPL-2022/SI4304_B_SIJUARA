@@ -41,20 +41,12 @@
                             <div class="w-3/12 text-sm text-center text-gray-600 py-2 px-4 font-semibold">{{ $student->roll_number }}</div>
                             <div class="w-5/12 text-sm text-center py-2 px-4 flex items-center justify-end">
                                 <label class="block text-gray-500 font-semibold sm:border-r sm:pr-4">
-                                    <input name="attendences[{{ $student->id }}]" class="leading-tight" type="radio" value="present">
+                                    <input name="attendences[{{ $student->id }}]" class="leading-tight" type="radio" value="hadir">
                                     <span class="text-sm text-center">Hadir</span>
                                 </label>
                                 <label class="ml-4 block text-gray-500 font-semibold">
-                                    <input name="attendences[{{ $student->id }}]" class="leading-tight" type="radio" value="absent">
+                                    <input name="attendences[{{ $student->id }}]" class="leading-tight" type="radio" value="alfa">
                                     <span class="text-sm text-center">Alfa</span>
-                                </label>
-                                <label class="ml-4 block text-gray-500 font-semibold">
-                                    <input name="attendences[{{ $student->id }}]" class="leading-tight" type="radio" value="ijin">
-                                    <span class="text-sm text-center">ijin</span>
-                                </label>
-                                <label class="ml-4 block text-gray-500 font-semibold">
-                                    <input name="attendences[{{ $student->id }}]" class="leading-tight" type="radio" value="Sakit">
-                                    <span class="text-sm text-center">Sakit</span>
                                 </label>
                             </div>
                             <input type="hidden" name="class_id" value="{{ $student->class_id }}">
@@ -63,7 +55,7 @@
                     @endforeach
                     <div class="mt-6 col-md-12 text-center">
                         <button class="shadow bg-blue-500 hover:bg-purple-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
-                            Attendance
+                            Submit Absensi
                         </button>
                     </div>
                 </form>

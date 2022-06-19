@@ -98,9 +98,9 @@ class AttendanceController extends Controller
 
         foreach ($request->attendences as $studentid => $attendence) {
 
-            if( $attendence == 'present' ) {
+            if( $attendence == 'hadir' ) {
                 $attendence_status = true;
-            } else if( $attendence == 'absent' ){
+            } else if( $attendence == 'alfa'){
                 $attendence_status = false;
             }
 
