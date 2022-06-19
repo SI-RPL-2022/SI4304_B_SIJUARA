@@ -51,6 +51,28 @@ class ParentsController extends Controller
             'permanent_address' => 'required|string|max:255'
         ]);
 
+        $user = User::create([
+            'name'      => $request->name,
+            'email'     => $request->email,
+            'password'  => Hash::make($request->password)
+        ]);
+        
+        if ($request->hasFile('profile_picture')) {
+            $profile = Str::slug($user->name).'-'.$user->id.'.'.$request->profile_picture->getClientOriginalExtension();
+            $request->profile_picture->move(public_path('images/profile'), $profile);
+        } else {
+            $profile = 'avatar.png';
+        }
+        $user->update([
+            'profile_picture' => $profile
+        ]);
+
+        $user->parent()->create([
+            'gender'            => $request->gender,
+            'phone'             => $request->phone,
+            'current_address'   => $request->current_address,
+            'permanent_address' => $request->permanent_address
+        ]);
 
         $user->assignRole('Parent');
 
@@ -92,6 +114,13 @@ class ParentsController extends Controller
     {
         $parents = Parents::findOrFail($id);
 
+        $request->validate([
+            'name'              => 'required|string|max:255',
+            'gender'            => 'required|string',
+            'phone'             => 'required|string|max:255',
+            'current_address'   => 'required|string|max:255',
+            'permanent_address' => 'required|string|max:255'
+        ]);
 
         if ($request->hasFile('profile_picture')) {
             $profile = Str::slug($parents->user->name).'-'.$parents->user->id.'.'.$request->profile_picture->getClientOriginalExtension();
@@ -100,6 +129,18 @@ class ParentsController extends Controller
             $profile = $parents->user->profile_picture;
         }
 
+        $parents->user()->update([
+            'name'              => $request->name,
+            'email'             => $request->email,
+            'profile_picture'   => $profile
+        ]);
+
+        $parents->update([
+            'gender'            => $request->gender,
+            'phone'             => $request->phone,
+            'current_address'   => $request->current_address,
+            'permanent_address' => $request->permanent_address
+        ]);
 
         return redirect()->route('parents.index');
     }
