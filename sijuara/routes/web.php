@@ -47,6 +47,7 @@ Route::group(['middleware' => ['auth','role:Admin']], function ()
     Route::resource('teacher', 'TeacherController');
     Route::resource('parents', 'ParentsController');
     Route::resource('student', 'StudentController');
+    Route::resource('nilai', 'NilaiController');
     Route::get('attendance', 'AttendanceController@index')->name('attendance.index');
 
 
