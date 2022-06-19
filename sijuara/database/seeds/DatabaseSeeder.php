@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
         $user->assignRole('Admin');
 
         $user2 = User::create([
-            'name'          => 'Guru',
+            'name'          => 'guru',
             'email'         => 'guru@gmail.com',
             'password'      => bcrypt('guru123'),
             'created_at'    => date("Y-m-d H:i:s")
@@ -49,23 +49,15 @@ class DatabaseSeeder extends Seeder
         ]);
         $user4->assignRole('Student');
 
-        $user5 = User::create([
-            'name'          => 'kepalasekolah',
-            'email'         => 'kepsek@gmail.com',
-            'password'      => bcrypt('kepsek123'),
-            'created_at'    => date("Y-m-d H:i:s")
-        ]);
-        $user4->assignRole('Headmaster');
-
 
         DB::table('teachers')->insert([
             [
                 'user_id'           => $user2->id,
-                'gender'            => 'Laki-laki',
-                'phone'             => '085151234567',
-                'dateofbirth'       => '1993-04-11',
-                'current_address'   => 'Telkom',
-                'permanent_address' => 'Kota Bandung',
+                'gender'            => 'male',
+                'phone'             => '0851577723',
+                'dateofbirth'       => '1993-12-12',
+                'current_address'   => 'Kota. Bandung',
+                'permanent_address' => 'Bojong soang',
                 'created_at'        => date("Y-m-d H:i:s")
             ]
         ]);
@@ -73,10 +65,10 @@ class DatabaseSeeder extends Seeder
         DB::table('parents')->insert([
             [
                 'user_id'           => $user3->id,
-                'gender'            => 'Laki-laki',
-                'phone'             => '085151234568',
-                'current_address'   => 'Telkom',
-                'permanent_address' => 'Kota Bandung',
+                'gender'            => 'male',
+                'phone'             => '0851723131',
+                'current_address'   => 'Dayeuh Kolot',
+                'permanent_address' => 'Kab. Bandung',
                 'created_at'        => date("Y-m-d H:i:s")
             ]
         ]);
@@ -84,8 +76,8 @@ class DatabaseSeeder extends Seeder
         DB::table('grades')->insert([
             'teacher_id'        => 1,
             'class_numeric'     => 1,
-            'class_name'        => 'One',
-            'class_description' => 'class one'
+            'class_name'        => '1A',
+            'class_description' => 'kelas 1A'
         ]);
 
         DB::table('students')->insert([
@@ -94,11 +86,11 @@ class DatabaseSeeder extends Seeder
                 'parent_id'         => 1,
                 'class_id'          => 1,
                 'roll_number'       => 1,
-                'gender'            => 'Perempuan',
-                'phone'             => '085151234569',
-                'dateofbirth'       => '2000-04-11',
-                'current_address'   => 'Bojongsoang',
-                'permanent_address' => 'Dayeuhkolot',
+                'gender'            => 'female',
+                'phone'             => '0812345678',
+                'dateofbirth'       => '2005-04-11',
+                'current_address'   => 'Kota Bandung',
+                'permanent_address' => 'Kab. Bandung',
                 'created_at'        => date("Y-m-d H:i:s")
             ]
         ]);
