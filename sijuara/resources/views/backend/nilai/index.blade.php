@@ -21,4 +21,6 @@
                 <div class="w-3/12 px-4 py-3 text-center"> Nilai UAS</div>
             </div>
      </div>
+
+
 @endsection
