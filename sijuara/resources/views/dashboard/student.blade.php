@@ -164,10 +164,6 @@
                                 <span class="text-xs text-white bg-green-500 px-2 py-1 rounded">P</span>
                             @else
                                 <span class="text-xs text-white bg-red-500 px-2 py-1 rounded">A</span>
-
-                                <span class="text-xs text-white bg-red-500 px-2 py-1 rounded">I</span>
-                            
-                                <span class="text-xs text-white bg-red-500 px-2 py-1 rounded">S</span>
                             @endif
 
                         </div>
